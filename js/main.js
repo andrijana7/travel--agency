@@ -389,7 +389,7 @@ function ispisFuter() {
             }
         },
         dokument:{
-            href:"file:///C:/Users/Andrijana%20Vasic/OneDrive/Desktop/sajt/doc.pdf",
+            href:"document.pdf",
             content:"Documentation"
         }
        
