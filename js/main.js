@@ -1,11 +1,18 @@
 window.onload = function () {
 
-    
+    ///proba
+
+    let selection=document.querySelector('select');
+  
+       
+      
+     
+     
 
   //ispis menija
 
         function ispisMenija() {
-        var meni = ["Destinations", "About", "Portfolio", "Contact"];
+        var meni = ["Destinations", "Special offers", "Portfolio", "Contact"];
         let ul = document.getElementById('meni_ul')
         meni.forEach((item) => {
             let li = document.createElement('li');
@@ -26,7 +33,7 @@ window.onload = function () {
                         destination.scrollIntoView()
                         
                       break;
-                    case "About":
+                    case "Special offers":
                         a.setAttribute("href",item);
                         let about = document.getElementById('about');
                         about.scrollIntoView()
@@ -293,33 +300,39 @@ function proveraForme(){
       }
     if(nameV === ""){
         setError("Ne moze prazno ime!")
-        
-
+        errorName.innerHTML= `<p class="errorsWrong"> Insert your name please </p>`
     }
     else {
         setSuccess(nameV)
+        errorName.innerHTML= `<p class="errorsNone"> What a nice name! </p>`
     }
     if(emailV === ""){
         setError("Ne moze prazan email")
-        
+        errorEmail.innerHTML= `<p class="errorsWrong"> Insert your email please </p>`
     }
     else if(!isEmailValid(emailV)){
         setError("Email is not valid!")
+        errorEmail.innerHTML= `<p class="errorsWrong"> Insert your email in corect form please </p>`
     }
     else {
         setSuccess(emailV)
+        errorEmail.innerHTML= `<p class="errorsNone"> We will send you an email </p>`
     }
     if(!validateNumber(phoneV)){
         setError("Phone is not valid!")
+        errorPhone.innerHTML= `<p class="errorsWrong"> Insert your phone number please </p>`
     }
     else{
         setSuccess(phoneV)
+        errorPhone.innerHTML= `<p class="errorsNone"> You will receve a call wery soon</p>`
     }
     if(messageV === ""){
         setError("Ne moze prazna poruka")
+        errorMess.innerHTML= `<p class="errorsWrong"> Please enter message </p>`
     }
     else{
         setSuccess(messageV)
+        errorMess.innerHTML= `<p class="errorsNone"> You will get your response soon </p>`
     }
 }
     
@@ -389,7 +402,7 @@ function ispisFuter() {
             }
         },
         dokument:{
-            href:"document.pdf",
+            href:"documentation.pdf",
             content:"Documentation"
         }
        
@@ -416,7 +429,7 @@ function ispisFuter() {
     document.getElementById("futer").innerHTML = ispis;
 
 };
-    //ispis funkcija0
+    //ispis funkcija
 
     ispisMenija();
     ispisSlika();
@@ -450,7 +463,7 @@ function timer (){
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
-    let time = "December 21, 2020 20:32:00";
+    let time = "December 31, 2021 20:32:00";
     let countDown = new Date(time).getTime(),
     x = setInterval(function () {
 
@@ -476,3 +489,6 @@ function timer (){
 
     }, second)
 }
+
+
+
